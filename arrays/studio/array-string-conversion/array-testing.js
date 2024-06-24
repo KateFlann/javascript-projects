@@ -5,12 +5,26 @@ let protoArray4 = "Comma-spaces, might, require, typing, caution";
 
 strings = [protoArray1, protoArray2, protoArray3, protoArray4];
 
+console.log(protoArray1.includes(",", ";", " "))
+console.log(protoArray2.includes(",", ";", " "))
+console.log(protoArray3.includes(",", ";", " "))
+console.log(protoArray4.includes(",", ";", " "))
 //2) 
 function reverseCommas() {
 	//TODO: 1. create and instantiate your variables.
 	let check;
 	let output;
+
+	
 	//TODO: 2. write the code required for this step
+
+		
+
+
+	if (protoArray1.includes(",")) {
+		let newArray1 = protoArray1.split(",").reverse().join(",")
+		console.log(newArray1)
+	} 
 
 	//NOTE: For the code to run properly, you must return your output.  this needs to be the final line of code within the function's { }.
 	return output;
@@ -20,8 +34,14 @@ function reverseCommas() {
 function semiDash() {
 	let check;
 	let output;
+
 //TODO: write the code required for this step
 
+if (protoArray2.includes(";")) {
+		//split it into an array, alphabetize the entries, and then join the array into a new hyphen-separated string.
+		let newArray2 = protoArray2.split(";").sort().join("-")
+		console.log(newArray2)
+}
   
 	return output;
 }
@@ -32,7 +52,13 @@ function reverseSpaces() {
 	let output;
   //TODO: write the code required for this step
 
+  if (protoArray3.includes(" ")) {
+	//split it into an array, alphabetize the entries, and then join the array into a new hyphen-separated string.
+	let newArray3 = protoArray3.split(" ").sort().reverse().join(" ")
+	console.log(newArray3)
+
 	return output;
+}
 }
 
 //5)
@@ -41,6 +67,11 @@ function commaSpace() {
 	let output;
 	//TODO: write the code required for this step
   
+	if (protoArray4.includes(", ")) {
+		let newArray4 = protoArray4.split(", ").reverse().join(",")
+		console.log(newArray4)
+	} 
+	
 	return output;
 }
 
@@ -51,4 +82,4 @@ module.exports = {
 	semiDash: semiDash, 
 	reverseSpaces : reverseSpaces,
 	commaSpace : commaSpace
-};
+}
