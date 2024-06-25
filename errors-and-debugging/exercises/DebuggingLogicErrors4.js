@@ -27,6 +27,7 @@ if (crewStatus && computerStatus === 'green'){
    launchReady = false;
 }
 
+
 console.log("launchReady = ", launchReady);
 
 // if (launchReady) {
